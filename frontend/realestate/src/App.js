@@ -8,6 +8,7 @@ import {
   faBed,
   faBath,
   faSquare,
+  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faStar);
@@ -15,6 +16,7 @@ library.add(faMapMarkerAlt);
 library.add(faBed);
 library.add(faBath);
 library.add(faSquare);
+library.add(faSearch);
 
 function App() {
   return (

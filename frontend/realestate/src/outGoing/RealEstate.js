@@ -8,7 +8,7 @@ async function getItems() {
   try {
     return await api.get(`/realestates/`);
   } catch (error) {
-    console.log("PICSABA");
+    console.log("error");
   }
 }
 
@@ -16,7 +16,7 @@ async function getOneItem(id) {
   try {
     return await api.get(`/realestate/${id}`);
   } catch (error) {
-    console.log("PICSABA2");
+    console.log("error");
   }
 }
 

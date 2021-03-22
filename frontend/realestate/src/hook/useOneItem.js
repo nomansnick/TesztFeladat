@@ -11,7 +11,6 @@ export default function useOneItem() {
     async function () {
       if (id !== undefined) {
         try {
-          console.log("futok");
           const resp = await getOneItem(id);
           let address = addressToString(resp.data);
           setOneItemData({ ...resp.data, addressString: address });
@@ -43,7 +42,6 @@ export default function useOneItem() {
   }
 
   useEffect(() => {
-    console.log("FUTOK");
     loadOneItem();
   }, [loadOneItem]);
 

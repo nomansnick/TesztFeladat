@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function ButtonCustom(props) {
-  const { text, className } = props;
-  return <button className={className}>{text}</button>;
+  const { text, className, activate } = props;
+  return (
+    <button onClick={() => activate(text)} className={className}>
+      {text}
+    </button>
+  );
 }

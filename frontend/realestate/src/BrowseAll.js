@@ -13,7 +13,11 @@ const inputStyle = {
 
 export default function BrowseAll(props) {
   const { title } = props;
-  const [isBuy, setIsBuy] = useState(false);
+  const [activeButton, setActiveButton] = useState(" ");
+
+  function activate(target) {
+    setActiveButton(target);
+  }
 
   return (
     <div className="p-3 d-flex flex-column align-items-center">
@@ -38,10 +42,23 @@ export default function BrowseAll(props) {
         </div>
         <div className="d-flex justify-content-center">
           <ButtonCustom
-            className={isBuy ? "roundedTop activeButton" : "roundedTop"}
+            activate={activate}
+            className={
+              activeButton === "BUY"
+                ? "roundedTop orangeBg text-white"
+                : "roundedTop text-dark"
+            }
             text="BUY"
           />
-          <ButtonCustom className="roundedTop" text="RENT" />
+          <ButtonCustom
+            activate={activate}
+            className={
+              activeButton === "RENT"
+                ? "roundedTop orangeBg text-white"
+                : "roundedTop text-dark"
+            }
+            text="RENT"
+          />
         </div>
       </div>
     </div>

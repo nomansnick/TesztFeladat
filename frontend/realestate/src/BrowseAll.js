@@ -45,8 +45,8 @@ export default function BrowseAll(props) {
             activate={activate}
             className={
               activeButton === "BUY"
-                ? "roundedTop orangeBg text-white"
-                : "roundedTop text-dark"
+                ? "roundedTop orangeBg text-white buttonWidth"
+                : "roundedTop text-dark buttonWidth"
             }
             text="BUY"
           />
@@ -54,8 +54,8 @@ export default function BrowseAll(props) {
             activate={activate}
             className={
               activeButton === "RENT"
-                ? "roundedTop orangeBg text-white"
-                : "roundedTop text-dark"
+                ? "roundedTop orangeBg text-white buttonWidth"
+                : "roundedTop text-dark buttonWidth"
             }
             text="RENT"
           />

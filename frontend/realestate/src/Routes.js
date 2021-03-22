@@ -9,7 +9,7 @@ export default function Routes() {
         <BrowseOneItem />;
       </Route>
       <Route path="/">
-        <BrowseAll />;
+        <BrowseAll title="Browse" />;
       </Route>
     </Switch>
   );

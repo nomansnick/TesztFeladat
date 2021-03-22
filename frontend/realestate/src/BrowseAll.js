@@ -1,9 +1,12 @@
 import React from "react";
 
-export default function BrowseAll() {
+export default function BrowseAll(props) {
+  const { title } = props;
   return (
     <div>
-      <div>1</div>
+      <div>
+        <h1 className="font-weight-bold">{title}</h1>
+      </div>
       <div>2</div>
     </div>
   );

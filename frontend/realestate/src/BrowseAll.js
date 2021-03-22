@@ -5,6 +5,9 @@ import FormControl from "react-bootstrap/FormControl";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 import ButtonCustom from "./ButtonCustom";
 import { useState } from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const inputStyle = {
   fontFamily: "FontAwesome, Arial",
@@ -45,8 +48,8 @@ export default function BrowseAll(props) {
             activate={activate}
             className={
               activeButton === "BUY"
-                ? "roundedTop orangeBg text-white buttonWidth"
-                : "roundedTop text-dark buttonWidth"
+                ? "roundedTop orangeBg text-white buttonCustom"
+                : "roundedTop text-dark buttonCustom"
             }
             text="BUY"
           />
@@ -54,8 +57,8 @@ export default function BrowseAll(props) {
             activate={activate}
             className={
               activeButton === "RENT"
-                ? "roundedTop orangeBg text-white buttonWidth"
-                : "roundedTop text-dark buttonWidth"
+                ? "roundedTop orangeBg text-white buttonCustom"
+                : "roundedTop text-dark buttonCustom"
             }
             text="RENT"
           />

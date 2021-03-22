@@ -7,7 +7,7 @@ import ButtonCustom from "./ButtonCustom";
 import { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import SliderCustom from "./SliderCustom";
 
 const inputStyle = {
   fontFamily: "FontAwesome, Arial",
@@ -62,6 +62,9 @@ export default function BrowseAll(props) {
             }
             text="RENT"
           />
+        </div>
+        <div>
+          <SliderCustom />
         </div>
       </div>
     </div>

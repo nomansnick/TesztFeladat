@@ -4,6 +4,11 @@ import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
 
+const inputStyle = {
+  fontFamily: "FontAwesome, Arial",
+  fontStyle: "normal",
+};
+
 export default function BrowseAll(props) {
   const { title } = props;
   return (
@@ -19,6 +24,7 @@ export default function BrowseAll(props) {
         <div>
           <InputGroup className="mb-3">
             <FormControl
+              style={{ ...inputStyle }}
               className="rounded-pill"
               placeholder="&#xF002; Where do you want to live?"
               aria-label="location"

@@ -2,6 +2,21 @@
   color: orange;
 }
 
+.orangeBg {
+  background-color: orange;
+}
+
 .rounded1Rem {
   border-radius: 1rem;
+}
+
+.roundedTop {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.buttonCustom {
+  width: 3rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
 }

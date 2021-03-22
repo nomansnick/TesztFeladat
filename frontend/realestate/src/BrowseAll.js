@@ -3,6 +3,8 @@ import "./style.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
+import ButtonCustom from "./ButtonCustom";
+import { useState } from "react";
 
 const inputStyle = {
   fontFamily: "FontAwesome, Arial",
@@ -11,6 +13,8 @@ const inputStyle = {
 
 export default function BrowseAll(props) {
   const { title } = props;
+  const [isBuy, setIsBuy] = useState(false);
+
   return (
     <div className="p-3 d-flex flex-column align-items-center">
       <div className="col-xs-12 col-md-6 rounded1Rem bg-primary">
@@ -26,11 +30,18 @@ export default function BrowseAll(props) {
             <FormControl
               style={{ ...inputStyle }}
               className="rounded-pill"
-              placeholder="&#xF002; Where do you want to live?"
+              placeholder="&#xF002;  Where do you want to live?"
               aria-label="location"
               aria-describedby="basic-addon1"
             />
           </InputGroup>
+        </div>
+        <div className="d-flex justify-content-center">
+          <ButtonCustom
+            className={isBuy ? "roundedTop activeButton" : "roundedTop"}
+            text="BUY"
+          />
+          <ButtonCustom className="roundedTop" text="RENT" />
         </div>
       </div>
     </div>

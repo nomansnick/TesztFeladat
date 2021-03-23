@@ -21,7 +21,7 @@ export default function SliderCustom(props) {
         {items.map((oneItem) => (
           <div className="slickImgContainer">
             <Image
-              className="z-index-5"
+              className="z-index-5 mb-n4"
               src={oneItem.picUrl}
               style={{
                 borderRadius: "1rem",

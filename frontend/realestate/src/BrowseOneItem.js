@@ -10,8 +10,9 @@ import useOneItem from "./hook/useOneItem";
 const roundedTopImage = {
   borderTopLeftRadius: "1rem",
   borderTopRightRadius: "1rem",
-  marginBottom: "-15%",
-  minHeight: "20rem",
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
 };
 
 const oneRemRadius = {
@@ -38,17 +39,13 @@ export default function BrowseOneItem() {
 
   return oneItemData ? (
     <div className="d-flex justify-content-center align-items-stretch h-100">
-      <Card
-        className="col-xs-12 col-md-6 col-align-self-center pl-0 pr-0 h-auto"
+      <div
+        className="col-xs-12 col-md-8 col-align-self-center pl-0 pr-0 h-auto"
         style={{ ...oneRemRadius }}
       >
         <div className="d-flex flex-column align-items-center h-100">
-          <div>
-            <Image
-              className="img-fluid w-auto"
-              style={{ ...roundedTopImage }}
-              src={oneItemData.picUrl}
-            />
+          <div className="w-100 h-100 mb-n5">
+            <Image style={{ ...roundedTopImage }} src={oneItemData.picUrl} />
           </div>
           <div className="w-100 h-100">
             <Image
@@ -94,7 +91,7 @@ export default function BrowseOneItem() {
             </Card.Body>
           </div>
         </div>
-      </Card>
+      </div>
     </div>
   ) : (
     <div>Loading</div>

@@ -1,20 +1,16 @@
 import React from "react";
 import "./style.css";
-import InputGroup from "react-bootstrap/InputGroup";
-import FormControl from "react-bootstrap/FormControl";
 import "../node_modules/font-awesome/css/font-awesome.min.css";
-import ButtonCustom from "./ButtonCustom";
 import { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SliderCustom from "./SliderCustom";
 import CATEGORIES from "./assets/images/ImageUrlCollection";
 import useManyItems from "./hook/useManyItems";
-
-const inputStyle = {
-  fontFamily: "FontAwesome, Arial",
-  fontStyle: "normal",
-};
+import NavBottom from "./NavBottom";
+import BrowseAllTitle from "./BrowseAllTitle";
+import BrowseAllSearchWithIcon from "./BrowseAllSearchWithIcon";
+import BrowseAllButtonGroup from "./BrowseAllButtonGroup";
 
 export default function BrowseAll(props) {
   const { title } = props;
@@ -27,52 +23,26 @@ export default function BrowseAll(props) {
     setActiveButton(target);
   }
 
+  const routes = [
+    { label: "Browse", route: "/" },
+    { label: "Connections", route: "/connections" },
+    { label: "Save", route: "/save" },
+    { label: "Notifications", route: "/notifications" },
+  ];
+
   return (
-    <div className="p-3 d-flex flex-column align-items-center">
-      <div className="col-xs-12 col-md-6 rounded1Rem bg-primary">
-        <div className="d-flex flex-row justify-content-between">
-          <h1 className="font-weight-bold">{title}</h1>
-          <i
-            className="fa fa-map-marker fa-2x orange mt-2"
-            aria-hidden="true"
-          ></i>
-        </div>
+    <div className="p-3 d-flex justify-content-center align-items-stretch h-100">
+      <div className="d-flex flex-column justify-content-between col-xs-12 col-md-6 rounded1Rem bg-primary h-100 pt-3 pb-3">
+        <BrowseAllTitle title={title} />
         <div>
-          <InputGroup className="mb-3">
-            <FormControl
-              style={{ ...inputStyle }}
-              className="rounded-pill"
-              placeholder="&#xF002;  Where do you want to live?"
-              aria-label="location"
-              aria-describedby="basic-addon1"
-            />
-          </InputGroup>
+          <BrowseAllSearchWithIcon />
         </div>
-        <div className="d-flex justify-content-center">
-          <ButtonCustom
-            activate={activate}
-            className={
-              activeButton === "BUY"
-                ? "roundedTop orangeBg text-white buttonCustom mb-3"
-                : "roundedTop text-dark buttonCustom mb-3"
-            }
-            text="BUY"
-          />
-          <ButtonCustom
-            activate={activate}
-            className={
-              activeButton === "RENT"
-                ? "roundedTop orangeBg text-white buttonCustom mb-3"
-                : "roundedTop text-dark buttonCustom mb-3"
-            }
-            text="RENT"
-          />
-        </div>
+        <BrowseAllButtonGroup activate={activate} activeButton={activeButton} />
         <div>
           <SliderCustom
             title="Categories"
             items={categories}
-            toShow={2.5}
+            toShow={2.2}
             type="fixed"
             widthSet="1rem"
           />
@@ -81,11 +51,12 @@ export default function BrowseAll(props) {
           <SliderCustom
             title="Nearby"
             items={items}
-            toShow={1.5}
+            toShow={1.2}
             type="toLoad"
             widthSet="1rem"
           />
         </div>
+        <NavBottom routes={routes} />
       </div>
     </div>
   );

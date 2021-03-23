@@ -1,37 +1,41 @@
 import React from "react";
 import Slider from "react-slick";
+import Image from "react-bootstrap/Image";
+import Card from "react-bootstrap/Card";
+import "./style.css";
 
-export default function SliderCustom() {
+export default function SliderCustom(props) {
+  const { title, items, toShow, type, widthSet } = props;
   const settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: toShow,
     slidesToScroll: 1,
+    arrows: false,
   };
-  return (
+  return type === "fixed" || items ? (
     <div>
-      <h2> Single Item</h2>
+      <Card.Title className="font-weight-bold mt-2">{title}</Card.Title>
       <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
+        {items.map((oneItem) => (
+          <div className="slickImgContainer">
+            <Image
+              className="z-index-5"
+              src={oneItem.picUrl}
+              style={{
+                borderRadius: "1rem",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+            <div className="ml-3 text-white">{oneItem.category}</div>
+          </div>
+        ))}
       </Slider>
     </div>
+  ) : (
+    <div>Loading</div>
   );
 }

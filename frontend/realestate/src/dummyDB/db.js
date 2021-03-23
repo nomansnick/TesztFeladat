@@ -1,3 +1,10 @@
+const categories = {
+  residential: "Residential",
+  commercial: "Commercial",
+  industrial: "Industrial",
+  buildingPlot: "Building Plot",
+};
+
 const onePerson = {
   name: "Bill Bob",
   workplace: "High-stake Estates",
@@ -17,6 +24,7 @@ const oneAddress = {
 
 const onePlace = {
   name: "Grand Place",
+  type: categories.residential,
   nrOfBedrooms: 2,
   nrOfBathrooms: 2,
   area: 200,
@@ -48,6 +56,7 @@ const otherAddress = {
 
 const otherPlace = {
   name: "Small Place",
+  type: categories.residential,
   nrOfBedrooms: 1,
   nrOfBathrooms: 1,
   area: 100,

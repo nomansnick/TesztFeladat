@@ -8,6 +8,8 @@ import { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SliderCustom from "./SliderCustom";
+import CATEGORIES from "./assets/images/ImageUrlCollection";
+import useManyItems from "./hook/useManyItems";
 
 const inputStyle = {
   fontFamily: "FontAwesome, Arial",
@@ -17,6 +19,9 @@ const inputStyle = {
 export default function BrowseAll(props) {
   const { title } = props;
   const [activeButton, setActiveButton] = useState(" ");
+  const [categories, setCategories] = useState(CATEGORIES);
+
+  const { items } = useManyItems();
 
   function activate(target) {
     setActiveButton(target);
@@ -48,8 +53,8 @@ export default function BrowseAll(props) {
             activate={activate}
             className={
               activeButton === "BUY"
-                ? "roundedTop orangeBg text-white buttonCustom"
-                : "roundedTop text-dark buttonCustom"
+                ? "roundedTop orangeBg text-white buttonCustom mb-3"
+                : "roundedTop text-dark buttonCustom mb-3"
             }
             text="BUY"
           />
@@ -57,14 +62,29 @@ export default function BrowseAll(props) {
             activate={activate}
             className={
               activeButton === "RENT"
-                ? "roundedTop orangeBg text-white buttonCustom"
-                : "roundedTop text-dark buttonCustom"
+                ? "roundedTop orangeBg text-white buttonCustom mb-3"
+                : "roundedTop text-dark buttonCustom mb-3"
             }
             text="RENT"
           />
         </div>
         <div>
-          <SliderCustom />
+          <SliderCustom
+            title="Categories"
+            items={categories}
+            toShow={2.5}
+            type="fixed"
+            widthSet="1rem"
+          />
+        </div>
+        <div>
+          <SliderCustom
+            title="Nearby"
+            items={items}
+            toShow={1.5}
+            type="toLoad"
+            widthSet="1rem"
+          />
         </div>
       </div>
     </div>

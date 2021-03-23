@@ -9,7 +9,7 @@ import CATEGORIES from "./assets/images/ImageUrlCollection";
 import useManyItems from "./hook/useManyItems";
 import NavBottom from "./NavBottom";
 import BrowseAllTitle from "./BrowseAllTitle";
-import BrowseAllSearchWithIcon from "./BrowseAllSearchWithIcon";
+import SearchWithIcon from "./SearchWithIcon";
 import BrowseAllButtonGroup from "./BrowseAllButtonGroup";
 
 export default function BrowseAll(props) {
@@ -24,40 +24,48 @@ export default function BrowseAll(props) {
   }
 
   const routes = [
-    { label: "Browse", route: "/" },
-    { label: "Connections", route: "/connections" },
-    { label: "Save", route: "/save" },
-    { label: "Notifications", route: "/notifications" },
+    { label: "Browse", route: "/", icon: "fa fa-search" },
+    { label: "Connections", route: "/connections", icon: "fa fa-comment-o" },
+    { label: "Save", route: "/save", icon: "fa fa-heart-o" },
+    { label: "Notifications", route: "/notifications", icon: "fa fa-bell-o" },
   ];
 
   return (
-    <div className="p-3 d-flex justify-content-center align-items-stretch h-100">
-      <div className="d-flex flex-column justify-content-between col-xs-12 col-md-6 rounded1Rem bg-primary h-100 pt-3 pb-3">
-        <BrowseAllTitle title={title} />
-        <div>
-          <BrowseAllSearchWithIcon />
-        </div>
-        <BrowseAllButtonGroup activate={activate} activeButton={activeButton} />
-        <div>
-          <SliderCustom
-            title="Categories"
-            items={categories}
-            toShow={2.2}
-            type="fixed"
-            widthSet="1rem"
+    <div className="h-100">
+      <div className="d-flex justify-content-center align-items-stretch h-100 marginBottomCust">
+        <div className="d-flex flex-column justify-content-between col-xs-12 col-md-6 rounded1Rem bg-primary h-100 pt-3 pb-5">
+          <BrowseAllTitle title={title} />
+          <div>
+            <SearchWithIcon
+              placeHolder="&#xF002;  Where do you want to live?"
+              label="location"
+            />
+          </div>
+          <BrowseAllButtonGroup
+            activate={activate}
+            activeButton={activeButton}
           />
+          <div>
+            <SliderCustom
+              title="Categories"
+              items={categories}
+              toShow={2.2}
+              type="fixed"
+              widthSet="1rem"
+            />
+          </div>
+          <div>
+            <SliderCustom
+              title="Nearby"
+              items={items}
+              toShow={1.2}
+              type="toLoad"
+              widthSet="1rem"
+            />
+          </div>
         </div>
-        <div>
-          <SliderCustom
-            title="Nearby"
-            items={items}
-            toShow={1.2}
-            type="toLoad"
-            widthSet="1rem"
-          />
-        </div>
-        <NavBottom routes={routes} />
       </div>
+      <NavBottom className="mt-n5" routes={routes} />
     </div>
   );
 }

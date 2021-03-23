@@ -9,14 +9,15 @@ const inputStyle = {
   fontStyle: "normal",
 };
 
-export default function BrowseAllSearchWithIcon() {
+export default function SearchWithIcon(props) {
+  const { label, placeHolder } = props;
   return (
     <InputGroup className="mb-3">
       <FormControl
         style={{ ...inputStyle }}
         className="rounded-pill"
-        placeholder="&#xF002;  Where do you want to live?"
-        aria-label="location"
+        placeholder={placeHolder}
+        aria-label={label}
         aria-describedby="basic-addon1"
       />
     </InputGroup>

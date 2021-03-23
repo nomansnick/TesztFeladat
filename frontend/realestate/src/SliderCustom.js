@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import Image from "react-bootstrap/Image";
-import Card from "react-bootstrap/Card";
 import "./style.css";
 
 export default function SliderCustom(props) {
@@ -16,7 +15,7 @@ export default function SliderCustom(props) {
   };
   return type === "fixed" || items ? (
     <div>
-      <Card.Title className="font-weight-bold mt-2">{title}</Card.Title>
+      <h3 className="font-weight-bold pb-3">{title}</h3>
       <Slider {...settings}>
         {items.map((oneItem) => (
           <div className="slickImgContainer">

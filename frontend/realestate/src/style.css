@@ -21,6 +21,14 @@
   margin-right: 0.1rem;
 }
 
+.marginBottomCust {
+  margin-bottom: -4rem;
+}
+
 .slickImgContainer {
   height: 20vh;
+}
+
+.navBarHeight {
+  height: 5rem;
 }

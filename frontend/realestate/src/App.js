@@ -9,6 +9,9 @@ import {
   faBath,
   faSquare,
   faSearch,
+  faComment,
+  faHeart,
+  faBell,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faStar);
@@ -17,6 +20,9 @@ library.add(faBed);
 library.add(faBath);
 library.add(faSquare);
 library.add(faSearch);
+library.add(faComment);
+library.add(faHeart);
+library.add(faBell);
 
 function App() {
   return (

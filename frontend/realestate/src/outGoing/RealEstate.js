@@ -12,6 +12,14 @@ async function getItems() {
   }
 }
 
+async function getContacts() {
+  try {
+    return await api.get(`/realestates/`);
+  } catch (error) {
+    console.log("error");
+  }
+}
+
 async function getOneItem(id) {
   try {
     return await api.get(`/realestate/${id}`);
@@ -20,4 +28,4 @@ async function getOneItem(id) {
   }
 }
 
-export { getItems, getOneItem };
+export { getItems, getOneItem, getContacts };

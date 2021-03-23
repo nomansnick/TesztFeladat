@@ -8,7 +8,7 @@ const roundedTopImage = {
   borderTopLeftRadius: "1rem",
   borderTopRightRadius: "1rem",
   width: "100%",
-  height: "100%",
+  height: "25rem",
   objectFit: "cover",
 };
 
@@ -19,9 +19,9 @@ export default function BrowseOneItem() {
 
   return oneItemData ? (
     <div className="d-flex justify-content-center align-items-stretch h-100 w-100">
-      <div className="col-xs-12 col-md-8 col-align-self-center pl-0 pr-0 rounded1Rem">
+      <div className="col-xs-12 col-md-6 col-align-self-center pl-0 pr-0 rounded1Rem">
         <div className="d-flex flex-column align-items-center h-100">
-          <div className="d-flex flex-1 h-100 mb-n3">
+          <div className="d-flex w-100 mb-n3">
             <Image style={{ ...roundedTopImage }} src={oneItemData.picUrl} />
           </div>
           <BrowseOneLower oneItemData={oneItemData} />

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "react-bootstrap/Image";
-import "../node_modules/font-awesome/css/font-awesome.min.css";
-import useOneItem from "./hook/useOneItem";
+import "../../node_modules/font-awesome/css/font-awesome.min.css";
+import useOneItem from "../hook/useOneItem";
 import BrowseOneLower from "./BrowseOneLower";
 
 const roundedTopImage = {

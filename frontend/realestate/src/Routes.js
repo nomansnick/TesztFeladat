@@ -1,7 +1,7 @@
 import { Switch, Route } from "react-router-dom";
-import BrowseOneItem from "./BrowseOneItem";
-import BrowseAll from "./BrowseAll";
-import Connections from "./Connections";
+import BrowseOneItem from "./browseOne/BrowseOneItem";
+import BrowseAll from "./browseAll/BrowseAll";
+import Connections from "./notImplemented_TODO/Connections";
 
 export default function Routes() {
   return (

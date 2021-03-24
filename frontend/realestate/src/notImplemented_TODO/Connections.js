@@ -1,7 +1,7 @@
 import React from "react";
-import SearchWithIcon from "./SearchWithIcon";
-import "../node_modules/font-awesome/css/font-awesome.min.css";
-import useContacts from "./hook/useContacts";
+import SearchWithIcon from "../SearchWithIcon";
+import "../../node_modules/font-awesome/css/font-awesome.min.css";
+import useContacts from "../hook/useContacts";
 import { Image } from "react-bootstrap";
 
 const thumbnailFix = {

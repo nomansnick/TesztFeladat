@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import Image from "react-bootstrap/Image";
-import "./style.css";
+import "../style.css";
 
 export default function SliderCustom(props) {
   const { title, items, toShow, type, widthSet } = props;

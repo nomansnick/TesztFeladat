@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonCustom from "./ButtonCustom";
+import ButtonCustom from "../ButtonCustom";
 
 export default function BrowseAllButtonGroup(props) {
   const { activate, activeButton } = props;

@@ -1,15 +1,15 @@
 import React from "react";
-import "./style.css";
-import "../node_modules/font-awesome/css/font-awesome.min.css";
+import "../style.css";
+import "../../node_modules/font-awesome/css/font-awesome.min.css";
 import { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SliderCustom from "./SliderCustom";
-import CATEGORIES from "./assets/images/ImageUrlCollection";
-import useManyItems from "./hook/useManyItems";
+import CATEGORIES from "../assets/images/ImageUrlCollection";
+import useManyItems from "../hook/useManyItems";
 import NavBottom from "./NavBottom";
 import BrowseAllTitle from "./BrowseAllTitle";
-import SearchWithIcon from "./SearchWithIcon";
+import SearchWithIcon from "../SearchWithIcon";
 import BrowseAllButtonGroup from "./BrowseAllButtonGroup";
 
 export default function BrowseAll(props) {

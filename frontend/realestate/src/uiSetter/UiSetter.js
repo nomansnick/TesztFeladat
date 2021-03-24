@@ -10,6 +10,9 @@ export default function UiSetter(props) {
     typography,
     setTypography,
     typoCycle,
+    resolution,
+    setResolution,
+    resCycle,
   } = props;
   return (
     <div>
@@ -52,9 +55,9 @@ export default function UiSetter(props) {
             />
             <OneCell
               label="Screen"
-              value={device}
-              valueSetter={setDevice}
-              cycler={deviceCycle}
+              value={resolution}
+              valueSetter={setResolution}
+              cycler={resCycle}
             />
           </tr>
         </tbody>

@@ -39,11 +39,36 @@
 }
 
 .smartPhoneI10 {
-  width: 360px;
-  height: 640px;
+  width: 375px;
+  height: 812px;
 }
 
 .smartPhonePixel {
   width: 411px;
   height: 731px;
+}
+
+.pcScreen1920x1080 {
+  width: 1920px;
+  height: 1080px;
+}
+
+.pcScreen1600x900 {
+  width: 1600px;
+  height: 900px;
+}
+
+.pcScreen1024x768 {
+  width: 1024px;
+  height: 768px;
+}
+
+.tablet {
+  width: 768px;
+  height: 1024px;
+}
+
+.tabletPro {
+  width: 1024px;
+  height: 1366px;
 }

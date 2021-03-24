@@ -1,10 +1,10 @@
 import React from "react";
 
 export default function ButtonCustom(props) {
-  const { text, className, activate } = props;
+  const { param, children, className, click } = props;
   return (
-    <button onClick={() => activate(text)} className={className}>
-      {text}
+    <button onClick={() => click(param)} className={className}>
+      {children}
     </button>
   );
 }

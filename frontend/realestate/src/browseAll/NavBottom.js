@@ -13,7 +13,7 @@ function NavBottom(props) {
   const { routes } = props;
   return (
     <div className="d-flex justify-content-center navBarHeight">
-      <div className="col-xs-12 col-md-6 d-flex justify-content-around align-items-center bg-secondary rounded1Rem">
+      <div className="col-12 d-flex justify-content-around align-items-center bg-secondary rounded1Rem">
         {routes.map((oneRoute) => (
           <div className="w-100">
             <Link

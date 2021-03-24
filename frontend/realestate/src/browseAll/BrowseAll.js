@@ -33,7 +33,7 @@ export default function BrowseAll(props) {
   return (
     <div className="h-100">
       <div className="d-flex justify-content-center align-items-stretch h-100 marginBottomCust">
-        <div className="d-flex flex-column justify-content-between col-xs-12 col-md-6 rounded1Rem bg-primary h-100 pt-3 pb-5">
+        <div className="d-flex flex-column justify-content-between col-12 rounded1Rem bg-primary h-100 pt-3 pb-5">
           <BrowseAllTitle title={title} />
           <div>
             <SearchWithIcon

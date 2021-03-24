@@ -32,3 +32,18 @@
 .navBarHeight {
   height: 5rem;
 }
+
+.smartPhoneGS5 {
+  width: 360px;
+  height: 640px;
+}
+
+.smartPhoneI10 {
+  width: 360px;
+  height: 640px;
+}
+
+.smartPhonePixel {
+  width: 411px;
+  height: 731px;
+}

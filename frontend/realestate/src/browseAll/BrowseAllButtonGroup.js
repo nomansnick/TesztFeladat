@@ -6,23 +6,27 @@ export default function BrowseAllButtonGroup(props) {
   return (
     <div className="d-flex justify-content-center">
       <ButtonCustom
-        activate={activate}
+        click={activate}
         className={
           activeButton === "BUY"
             ? "roundedTop orangeBg text-white buttonCustom"
             : "roundedTop text-dark buttonCustom"
         }
-        text="BUY"
-      />
+        param="BUY"
+      >
+        BUY
+      </ButtonCustom>
       <ButtonCustom
-        activate={activate}
+        click={activate}
         className={
           activeButton === "RENT"
             ? "roundedTop orangeBg text-white buttonCustom"
             : "roundedTop text-dark buttonCustom"
         }
-        text="RENT"
-      />
+        param="RENT"
+      >
+        RENT
+      </ButtonCustom>
     </div>
   );
 }

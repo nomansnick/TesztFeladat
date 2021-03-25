@@ -13,6 +13,7 @@ import {
   faComment,
   faHeart,
   faBell,
+  faAngleLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { devices, typographies, resolutions } from "./settings/Settings";
 import UiSetter from "./uiSetter/UiSetter";
@@ -26,6 +27,7 @@ library.add(faSearch);
 library.add(faComment);
 library.add(faHeart);
 library.add(faBell);
+library.add(faAngleLeft);
 
 function App() {
   const [deviceCycle, setDeviceCycle] = useState(0);
@@ -106,8 +108,8 @@ function App() {
 
   return (
     <Router>
-      <div className="d-flex w-100 h-100 flex-wrap">
-        <div className="d-flex w-100 align-items-center justify-content-center">
+      <div className="d-flex w-100 h-100 flex-wrap justify-content-around">
+        <div className="d-flex align-items-center justify-content-center">
           <UiSetter
             device={device}
             setDevice={nextDevice}
@@ -121,7 +123,7 @@ function App() {
           />
         </div>
         <div className={classToUse}>
-          <Routes />
+          <Routes resolution={resolution} device={device} />
         </div>
       </div>
     </Router>

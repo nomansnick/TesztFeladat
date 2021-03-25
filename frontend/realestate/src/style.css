@@ -6,8 +6,12 @@
   background-color: orange;
 }
 
-.rounded1Rem {
+.rounded2Rem {
   border-radius: 2rem;
+}
+
+.rounded1Rem {
+  border-radius: 1rem;
 }
 
 .roundedTop {
@@ -27,6 +31,11 @@
 
 .slickImgContainer {
   height: 20vh;
+}
+
+.settingButton {
+  width: 10rem;
+  height: 5rem;
 }
 
 .navBarHeight {

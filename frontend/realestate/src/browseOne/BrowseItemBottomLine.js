@@ -8,9 +8,15 @@ export default function BrowseItemBottomLine(props) {
       <div>{onePlace.price} HUF</div>
       <div>
         {onePlace.isNegotiable === true ? (
-          <Button variant="success"> Negotiable </Button>
+          <Button className="rounded-pill" variant="success">
+            {" "}
+            Negotiable{" "}
+          </Button>
         ) : (
-          <Button variant="warning"> Non-negotiable </Button>
+          <Button className="rounded-pill" variant="warning">
+            {" "}
+            Non-negotiable{" "}
+          </Button>
         )}
       </div>
     </div>

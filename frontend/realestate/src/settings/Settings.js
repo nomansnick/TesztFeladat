@@ -6,6 +6,8 @@ const typographies = [
   { type: "Verdana", className: "verdana" },
 ];
 
+const formats = ["PSD", "Not Implemented"];
+
 const resolutions = {
   SmartPhone: [
     { size: "360 x 460", className: "smartPhoneGS5" },

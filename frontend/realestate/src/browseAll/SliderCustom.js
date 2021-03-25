@@ -2,7 +2,6 @@ import React from 'react'
 import Slider from 'react-slick'
 import Image from 'react-bootstrap/Image'
 import '../style.css'
-import useOneItem from '../hook/useOneItem'
 import { Link } from 'react-router-dom'
 
 export default function SliderCustom(props) {
@@ -42,7 +41,7 @@ export default function SliderCustom(props) {
           >
             {!link ? (
               <Image
-                onClick={() => clicked()}
+                onClick={() => clicked(oneItem.category)}
                 className="z-index-5 mb-n4"
                 src={oneItem.picUrl}
                 style={{

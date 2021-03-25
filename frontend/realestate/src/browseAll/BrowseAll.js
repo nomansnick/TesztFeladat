@@ -26,6 +26,8 @@ export default function BrowseAll(props) {
   const [listed, setListed] = useState(items)
 
   function activate(target) {
+    console.log(activeButton)
+    console.log(target)
     activeButton === target ? emptyTypeFilter() : activateTypeFilter(target)
   }
 
@@ -47,15 +49,33 @@ export default function BrowseAll(props) {
 
   function activateTypeFilter(target) {
     setActiveButton(target)
-    const changed = [...listed]
+    let changed = []
+    listed ? (changed = [...listed]) : (changed = [...items])
     target === 'BUY'
-      ? changed.filter((onePlace) => onePlace.isForSale)
-      : changed.filter((onePlace) => !onePlace.isForSale)
+      ? (changed = changed.filter((onePlace) => onePlace.isForSale))
+      : (changed = changed.filter((onePlace) => !onePlace.isForSale))
     setListed(changed)
   }
 
   function activateCategory(category) {
-    activeCategory === categories ? emptyCategory() : filterCategory()
+    console.log('kapott')
+    console.log(category)
+    console.log('aktiv')
+    console.log(activeCategory)
+    activeCategory === category ? emptyCategory() : filterCategory(category)
+  }
+
+  function filterCategory(category) {
+    console.log(category)
+    let changed = []
+    console.log(listed)
+    listed ? (changed = [...listed]) : (changed = [...items])
+    console.log(changed)
+    changed = changed.filter((onePlace) => onePlace.type === category)
+    console.log(changed)
+    setListed(changed)
+    setActiveCategory(category)
+    setIsSortedCategory(true)
   }
 
   function emptyCategory() {
@@ -70,7 +90,10 @@ export default function BrowseAll(props) {
       : setTypeAndDistance()
   }
 
-  function setTypeAndDistance() {}
+  function setTypeAndDistance() {
+    coordinates(lastAddress)
+    activateTypeFilter(activeButton)
+  }
 
   function searchLocation(values) {
     coordinates(values.search)
@@ -93,7 +116,6 @@ export default function BrowseAll(props) {
   }
 
   function sortList(coords) {
-    console.log(coords)
     const changed = [...items]
     changed.forEach((onePlace) => setDistance(onePlace, coords))
     changed.sort((a, b) => (a.distance > b.distance ? 1 : -1))

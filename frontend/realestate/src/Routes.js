@@ -12,10 +12,10 @@ export default function Routes(props) {
         <BrowseOneItem resolution={resolution} device={device} />;
       </Route>
       <Route path="/connections">
-        <Connections />;
+        <Connections />
       </Route>
       <Route path="/">
-        <BrowseAll title="Browse" />;
+        <BrowseAll title="Browse" />
       </Route>
     </Switch>
   )

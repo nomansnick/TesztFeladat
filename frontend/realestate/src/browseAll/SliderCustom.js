@@ -14,7 +14,7 @@ export default function SliderCustom(props) {
     arrows: false,
   }
   return type === 'fixed' || items ? (
-    <div>
+    <div className="d-flex flex-column justify-content-between">
       <h3 className="font-weight-bold pb-3">{title}</h3>
       <Slider {...settings}>
         {items.map((oneItem) => (

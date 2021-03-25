@@ -4,10 +4,6 @@ const api = axios.create({
   baseURL: `/api/`,
 })
 
-const coordApi = axios.create({
-  baseURL: `/api.positionstack.com/`,
-})
-
 async function getItems() {
   try {
     return await api.get(`/realestates/`)
@@ -32,10 +28,10 @@ async function getOneItem(id) {
   }
 }
 
-async function getCoords(address) {
+async function getCoords(access_key, query) {
   try {
-    return await coordApi.get(
-      `/v1/forward?key=cfbb81329857df19e3ec733b22ab7a86&query=${address}`
+    return await axios.get(
+      `http://api.positionstack.com/v1/forward?access_key=${access_key}&query=${query}`
     )
   } catch (error) {
     console.log('errorCoord')

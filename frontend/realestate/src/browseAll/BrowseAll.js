@@ -27,22 +27,26 @@ export default function BrowseAll(props) {
   }
 
   function searchLocation(values) {
-    console.log('hely')
-    console.log(values)
+    coordinates(values.search)
   }
 
   async function coordinates(address) {
-    const response = await getCoords(address)
+    const access_key = 'cfbb81329857df19e3ec733b22ab7a86'
+    const query = address
+    const response = await getCoords(access_key, query)
     const coords = {
-      latitude: response.data.results.latitude,
-      longitude: response.data.results.longitude,
+      latitude: response.data.data[0].latitude,
+      longitude: response.data.data[0].longitude,
     }
     sortList(coords)
   }
 
   function sortList(coords) {
+    console.log(coords)
+    console.log(listed)
     listed.forEach((onePlace) => setDistance(onePlace, coords))
     listed.sort((a, b) => (a.distance > b.distance ? 1 : -1))
+    console.log(listed)
   }
 
   function setDistance(onePlace, coords) {
@@ -71,7 +75,7 @@ export default function BrowseAll(props) {
           <BrowseAllTitle title={title} />
           <Formik
             initialValues={initialValues}
-            onSubmit={(values) => console.log(values)}
+            onSubmit={(values) => searchLocation(values)}
           >
             <Form>
               <SearchWithIcon

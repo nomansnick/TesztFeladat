@@ -30,7 +30,15 @@
 }
 
 .slickImgContainer {
-  height: 20vh;
+  height: 18vh;
+}
+
+.slickImgContainerMed {
+  height: 22vh;
+}
+
+.slickImgContainerLarge {
+  height: 30vh;
 }
 
 .doubleBorder {
@@ -89,13 +97,13 @@
 }
 
 .tNR {
-  font-family: "Times New Roman";
+  font-family: 'Times New Roman';
 }
 
 .arial {
-  font-family: "Arial";
+  font-family: 'Arial';
 }
 
 .verdana {
-  font-family: "Verdana";
+  font-family: 'Verdana';
 }

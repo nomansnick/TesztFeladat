@@ -46,6 +46,7 @@ function App() {
       setDevice(devices[0])
       setDeviceCycle(0)
       setResolution(resolutions[devices[0]][0].size)
+      setResCycle(0)
       setUsedSize(0)
       classNameBuilder(resolutions[devices[0]][0].className, typography)
       return
@@ -53,6 +54,7 @@ function App() {
     setDevice(devices[param + 1])
     setDeviceCycle(param + 1)
     setResolution(resolutions[devices[param + 1]][0].size)
+    setResCycle(0)
     setUsedSize(0)
     classNameBuilder(resolutions[devices[param + 1]][0].className, typography)
   }
@@ -89,6 +91,7 @@ function App() {
   }
 
   function nextResInner(param, array) {
+    console.log(param)
     if (param >= array.length - 1) {
       setResolution(array[0].size)
       setResCycle(0)
@@ -108,7 +111,7 @@ function App() {
 
   return (
     <Router>
-      <div className="d-flex w-100 h-100 flex-wrap justify-content-around">
+      <div className="d-flex w-100 h-100 flex-wrap justify-content-around align-items-center">
         <div className="d-flex align-items-center justify-content-center">
           <UiSetter
             device={device}

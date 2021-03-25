@@ -15,7 +15,7 @@ export default function Routes(props) {
         <Connections />
       </Route>
       <Route path="/">
-        <BrowseAll title="Browse" />
+        <BrowseAll title="Browse" resolution={resolution} device={device} />
       </Route>
     </Switch>
   )

@@ -15,7 +15,7 @@ export default function NavBottom(props) {
     <div className="d-flex justify-content-center navBarHeight">
       <div className="col-12 d-flex justify-content-around align-items-center bg-secondary rounded1Rem">
         {routes.map((oneRoute) => (
-          <div className="w-100">
+          <div key={oneRoute.route} className="w-100">
             <Link
               className="d-flex flex-column align-items-center"
               to={oneRoute.route}

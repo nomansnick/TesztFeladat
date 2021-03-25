@@ -30,7 +30,7 @@ export default function BrowseOneLower(props) {
   return (
     <div className="d-flex flex-column flex-1 w-100 h-100 bg-primary rounded1Rem mt-n3">
       <Image
-        className="img-thumbnail z-index-5 border-double"
+        className="doubleBorder z-index-5 border-double"
         src={oneItemData.person.picUrl}
         style={{ ...thumbnailFix }}
         roundedCircle

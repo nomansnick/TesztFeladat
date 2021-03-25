@@ -33,6 +33,12 @@
   height: 20vh;
 }
 
+.doubleBorder {
+  border-width: 0.3rem;
+  border-color: white;
+  border-style: double;
+}
+
 .settingButton {
   width: 10rem;
   height: 5rem;

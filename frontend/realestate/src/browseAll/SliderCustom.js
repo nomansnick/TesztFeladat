@@ -3,9 +3,19 @@ import Slider from 'react-slick'
 import Image from 'react-bootstrap/Image'
 import '../style.css'
 import useOneItem from '../hook/useOneItem'
+import { Link } from 'react-router-dom'
 
 export default function SliderCustom(props) {
-  const { title, items, toShow, type, device, resolution } = props
+  const {
+    title,
+    items,
+    toShow,
+    type,
+    device,
+    resolution,
+    clicked,
+    link,
+  } = props
   const settings = {
     dots: false,
     infinite: false,
@@ -30,16 +40,32 @@ export default function SliderCustom(props) {
                 : 'slickImgContainerLarge'
             }
           >
-            <Image
-              className="z-index-5 mb-n4"
-              src={oneItem.picUrl}
-              style={{
-                borderRadius: '1rem',
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-              }}
-            />
+            {!link ? (
+              <Image
+                onClick={() => clicked()}
+                className="z-index-5 mb-n4"
+                src={oneItem.picUrl}
+                style={{
+                  borderRadius: '1rem',
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+              />
+            ) : (
+              <Link to={`/browse/${oneItem.id}`}>
+                <Image
+                  className="z-index-5 mb-n4"
+                  src={oneItem.picUrl}
+                  style={{
+                    borderRadius: '1rem',
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                  }}
+                />
+              </Link>
+            )}
             <div className="ml-3 text-white">{oneItem.category}</div>
           </div>
         ))}

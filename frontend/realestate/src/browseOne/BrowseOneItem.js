@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "react-bootstrap/Image";
+import LinkBack from "../LinkBack";
 import "../../node_modules/font-awesome/css/font-awesome.min.css";
 import useOneItem from "../hook/useOneItem";
 import BrowseOneLower from "./BrowseOneLower";
@@ -40,10 +40,9 @@ export default function BrowseOneItem(props) {
             className="d-flex w-100 justify-content-between"
             style={roundedTopImage}
           >
-            <i
-              className="fa fa-angle-left fa-2x mt-5 ml-5 text-dark"
-              aria-hidden="true"
-            ></i>
+            <div className="mt-5 ml-5">
+              <LinkBack />
+            </div>
             <i
               className="fa fa-heart-o fa-2x mt-5 mr-5 text-dark"
               aria-hidden="true"

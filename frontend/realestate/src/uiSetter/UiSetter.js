@@ -1,6 +1,6 @@
-import React from "react";
-import Table from "react-bootstrap/Table";
-import OneCell from "./OneCell";
+import React from 'react'
+import Table from 'react-bootstrap/Table'
+import OneCell from './OneCell'
 
 export default function UiSetter(props) {
   const {
@@ -13,7 +13,7 @@ export default function UiSetter(props) {
     resolution,
     setResolution,
     resCycle,
-  } = props;
+  } = props
 
   return (
     <div>
@@ -64,5 +64,5 @@ export default function UiSetter(props) {
         </tbody>
       </Table>
     </div>
-  );
+  )
 }

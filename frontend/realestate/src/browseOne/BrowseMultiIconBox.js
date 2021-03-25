@@ -1,8 +1,8 @@
-import React from "react";
-import OneIconBox from "./OneIconBox";
+import React from 'react'
+import OneIconBox from './OneIconBox'
 
 export default function BrosweMultiIconBox(props) {
-  const { onePlace } = props;
+  const { onePlace } = props
   return (
     <div className="d-flex flex-row justify-content-around w-100">
       <OneIconBox
@@ -17,5 +17,5 @@ export default function BrosweMultiIconBox(props) {
       />
       <OneIconBox icon="fa fa-square" type="AREA" value={onePlace.area} />
     </div>
-  );
+  )
 }

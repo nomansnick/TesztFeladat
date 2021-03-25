@@ -1,31 +1,31 @@
-import React from "react";
-import BrosweMultiIconBox from "./BrowseMultiIconBox";
-import BrowseItemBottomLine from "./BrowseItemBottomLine";
-import Rating from "react-rating";
-import Image from "react-bootstrap/Image";
+import React from 'react'
+import BrosweMultiIconBox from './BrowseMultiIconBox'
+import BrowseItemBottomLine from './BrowseItemBottomLine'
+import Rating from 'react-rating'
+import Image from 'react-bootstrap/Image'
 
 export default function BrowseOneLower(props) {
-  const { oneItemData, resolution, device } = props;
+  const { oneItemData, resolution, device } = props
 
-  const screenHeight = resolution.split(" ")[2];
+  const screenHeight = resolution.split(' ')[2]
   const thumbnail =
-    device === "Pc" && screenHeight > 800
-      ? { mt: "-3%", mw: "15vh" }
-      : device === "Pc" && screenHeight < 800
-      ? { mt: "-4%", mw: "15vh" }
-      : device === "Tablet"
-      ? { mt: "-5%", mw: "12vh" }
-      : { mt: "-10%", mw: "5rem" };
+    device === 'Pc' && screenHeight > 800
+      ? { mt: '-3%', mw: '15vh' }
+      : device === 'Pc' && screenHeight < 800
+      ? { mt: '-4%', mw: '15vh' }
+      : device === 'Tablet'
+      ? { mt: '-5%', mw: '12vh' }
+      : { mt: '-10%', mw: '5rem' }
 
   const rating = {
-    color: "yellow",
-  };
+    color: 'yellow',
+  }
 
   const thumbnailFix = {
     maxWidth: thumbnail.mw,
-    marginLeft: "10%",
+    marginLeft: '10%',
     marginTop: thumbnail.mt,
-  };
+  }
 
   return (
     <div className="d-flex flex-column flex-1 w-100 h-100 bg-primary rounded1Rem mt-n3">
@@ -66,5 +66,5 @@ export default function BrowseOneLower(props) {
         </div>
       </div>
     </div>
-  );
+  )
 }

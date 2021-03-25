@@ -1,11 +1,11 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import BrowseOneItem from "./browseOne/BrowseOneItem";
-import BrowseAll from "./browseAll/BrowseAll";
-import Connections from "./notImplemented_TODO/Connections";
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import BrowseOneItem from './browseOne/BrowseOneItem'
+import BrowseAll from './browseAll/BrowseAll'
+import Connections from './notImplemented_TODO/Connections'
 
 export default function Routes(props) {
-  const { resolution, device } = props;
+  const { resolution, device } = props
   return (
     <Switch>
       <Route path="/browse/:id">
@@ -18,5 +18,5 @@ export default function Routes(props) {
         <BrowseAll title="Browse" />;
       </Route>
     </Switch>
-  );
+  )
 }

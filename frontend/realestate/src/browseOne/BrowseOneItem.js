@@ -1,36 +1,36 @@
-import React from "react";
-import LinkBack from "../LinkBack";
-import "../../node_modules/font-awesome/css/font-awesome.min.css";
-import useOneItem from "../hook/useOneItem";
-import BrowseOneLower from "./BrowseOneLower";
+import React from 'react'
+import LinkBack from '../LinkBack'
+import '../../node_modules/font-awesome/css/font-awesome.min.css'
+import useOneItem from '../hook/useOneItem'
+import BrowseOneLower from './BrowseOneLower'
 
 export default function BrowseOneItem(props) {
-  const { resolution, device } = props;
-  const { oneItemData } = useOneItem();
+  const { resolution, device } = props
+  const { oneItemData } = useOneItem()
 
-  console.log(device);
-  console.log(resolution);
+  console.log(device)
+  console.log(resolution)
 
-  const screenWidth = resolution.split(" ")[0];
+  const screenWidth = resolution.split(' ')[0]
   const imageHeight =
-    device === "SmartPhone"
-      ? "20rem"
-      : device === "Tablet" && screenWidth > 1000
-      ? "30rem"
-      : device === "Tablet" && screenWidth < 1000
-      ? "25rem"
+    device === 'SmartPhone'
+      ? '20rem'
+      : device === 'Tablet' && screenWidth > 1000
+      ? '30rem'
+      : device === 'Tablet' && screenWidth < 1000
+      ? '25rem'
       : screenWidth > 1500
-      ? "25rem"
-      : "25rem";
+      ? '25rem'
+      : '25rem'
 
   const roundedTopImage = {
-    borderTopLeftRadius: "1rem",
-    borderTopRightRadius: "1rem",
+    borderTopLeftRadius: '1rem',
+    borderTopRightRadius: '1rem',
     height: imageHeight,
     backgroundImage: `url(${oneItemData?.picUrl})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }
 
   return oneItemData ? (
     <div className="d-flex justify-content-center align-items-stretch h-100 w-100">
@@ -58,9 +58,5 @@ export default function BrowseOneItem(props) {
     </div>
   ) : (
     <div>Loading</div>
-  );
+  )
 }
-
-/*
-<Card.Link href="#">Card Link</Card.Link>
-*/

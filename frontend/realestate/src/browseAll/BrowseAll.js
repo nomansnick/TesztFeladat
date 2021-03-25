@@ -1,34 +1,34 @@
-import React from "react";
-import "../style.css";
-import "../../node_modules/font-awesome/css/font-awesome.min.css";
-import { useState } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import SliderCustom from "./SliderCustom";
-import CATEGORIES from "../assets/images/ImageUrlCollection";
-import useManyItems from "../hook/useManyItems";
-import NavBottom from "./NavBottom";
-import BrowseAllTitle from "./BrowseAllTitle";
-import SearchWithIcon from "../SearchWithIcon";
-import BrowseAllButtonGroup from "./BrowseAllButtonGroup";
+import React from 'react'
+import '../style.css'
+import '../../node_modules/font-awesome/css/font-awesome.min.css'
+import { useState } from 'react'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import SliderCustom from './SliderCustom'
+import CATEGORIES from '../assets/images/ImageUrlCollection'
+import useManyItems from '../hook/useManyItems'
+import NavBottom from './NavBottom'
+import BrowseAllTitle from './BrowseAllTitle'
+import SearchWithIcon from '../SearchWithIcon'
+import BrowseAllButtonGroup from './BrowseAllButtonGroup'
 
 export default function BrowseAll(props) {
-  const { title } = props;
-  const [activeButton, setActiveButton] = useState(" ");
-  const [categories, setCategories] = useState(CATEGORIES);
+  const { title } = props
+  const [activeButton, setActiveButton] = useState(' ')
+  const [categories, setCategories] = useState(CATEGORIES)
 
-  const { items } = useManyItems();
+  const { items } = useManyItems()
 
   function activate(target) {
-    setActiveButton(target);
+    setActiveButton(target)
   }
 
   const routes = [
-    { label: "Browse", route: "/", icon: "fa fa-search" },
-    { label: "Connections", route: "/connections", icon: "fa fa-comment-o" },
-    { label: "Save", route: "/save", icon: "fa fa-heart-o" },
-    { label: "Notifications", route: "/notifications", icon: "fa fa-bell-o" },
-  ];
+    { label: 'Browse', route: '/', icon: 'fa fa-search' },
+    { label: 'Connections', route: '/connections', icon: 'fa fa-comment-o' },
+    { label: 'Save', route: '/save', icon: 'fa fa-heart-o' },
+    { label: 'Notifications', route: '/notifications', icon: 'fa fa-bell-o' },
+  ]
 
   return (
     <div className="h-100">
@@ -67,5 +67,5 @@ export default function BrowseAll(props) {
       </div>
       <NavBottom className="mt-n5" routes={routes} />
     </div>
-  );
+  )
 }

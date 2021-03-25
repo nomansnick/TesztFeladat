@@ -1,17 +1,17 @@
-import React from "react";
-import SearchWithIcon from "../SearchWithIcon";
-import "../../node_modules/font-awesome/css/font-awesome.min.css";
-import useContacts from "../hook/useContacts";
-import { Image } from "react-bootstrap";
-import LinkBack from "../LinkBack";
+import React from 'react'
+import SearchWithIcon from '../SearchWithIcon'
+import '../../node_modules/font-awesome/css/font-awesome.min.css'
+import useContacts from '../hook/useContacts'
+import { Image } from 'react-bootstrap'
+import LinkBack from '../LinkBack'
 
 const thumbnailFix = {
-  maxWidth: "8rem",
-  position: "relative",
-};
+  maxWidth: '8rem',
+  position: 'relative',
+}
 
 export default function Connections() {
-  const { items } = useContacts();
+  const { items } = useContacts()
   return (
     <>
       {items ? (
@@ -53,5 +53,5 @@ export default function Connections() {
         <div>Loading</div>
       )}
     </>
-  );
+  )
 }

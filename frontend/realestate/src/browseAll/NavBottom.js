@@ -1,16 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../style.css";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import '../style.css'
 
 const setting = {
-  textAlign: "center",
-  textDecoration: "none",
-  color: "inherit",
-  width: "inherit",
-};
+  textAlign: 'center',
+  textDecoration: 'none',
+  color: 'inherit',
+  width: 'inherit',
+}
 
 function NavBottom(props) {
-  const { routes } = props;
+  const { routes } = props
   return (
     <div className="d-flex justify-content-center navBarHeight">
       <div className="col-12 d-flex justify-content-around align-items-center bg-secondary rounded1Rem">
@@ -28,7 +28,7 @@ function NavBottom(props) {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default NavBottom;
+export default NavBottom

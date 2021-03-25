@@ -9,7 +9,7 @@ const setting = {
   width: 'inherit',
 }
 
-function NavBottom(props) {
+export default function NavBottom(props) {
   const { routes } = props
   return (
     <div className="d-flex justify-content-center navBarHeight">
@@ -30,5 +30,3 @@ function NavBottom(props) {
     </div>
   )
 }
-
-export default NavBottom

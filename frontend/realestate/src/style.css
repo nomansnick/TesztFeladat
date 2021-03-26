@@ -2,12 +2,34 @@
   color: rgb(230, 140, 100);
 }
 
+.orangeBg {
+  background: rgb(230, 140, 100) !important;
+}
+
 .lightGreyBg {
   background: lightgray;
 }
 
+.bgMain {
+  position: fixed;
+  top: 0px;
+  z-index: -20;
+}
+
 .orangeBg {
   background-color: rgb(230, 140, 100);
+}
+
+.iconFontSize {
+  font-size: 0.75rem;
+}
+
+.iconBoxHeight {
+  min-height: 3rem;
+}
+
+.borderNone {
+  border: none !important;
 }
 
 .rounded2Rem {

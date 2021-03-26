@@ -11,7 +11,6 @@ import NavBottom from './NavBottom'
 import BrowseAllTitle from './BrowseAllTitle'
 import SearchWithIcon from '../SearchWithIcon'
 import BrowseAllButtonGroup from './BrowseAllButtonGroup'
-import { Formik, Form } from 'formik'
 import { getCoords } from '../outGoing/RealEstate'
 
 export default function BrowseAll(props) {
@@ -121,17 +120,25 @@ export default function BrowseAll(props) {
     )
   }
 
-  const routes = [
-    { label: 'Browse', route: '/', icon: 'fa fa-search' },
-    { label: 'Connections', route: '/connections', icon: 'fa fa-comment-o' },
-    { label: 'Save', route: '/save', icon: 'fa fa-heart-o' },
-    { label: 'Notifications', route: '/notifications', icon: 'fa fa-bell-o' },
-  ]
+  let classBase =
+    'd-flex flex-column justify-content-between col-12 rounded1Rem bg-white h-100 pb-5'
+
+  const Phone = ' pt-3'
+  const Tablet = ' pt-4 pr-4 pl-4'
+  const Pc = ' pt-5 pr-5 pl-5'
 
   return items ? (
     <div className="h-100">
       <div className="d-flex justify-content-center align-items-stretch h-100 marginBottomCust">
-        <div className="d-flex flex-column justify-content-between col-12 rounded1Rem bg-white h-100 pt-3 pb-5">
+        <div
+          className={
+            device === 'SmartPhone'
+              ? classBase.concat(Phone)
+              : device === 'Tablet'
+              ? classBase.concat(Tablet)
+              : classBase.concat(Pc)
+          }
+        >
           <BrowseAllTitle title={title} />
           <SearchWithIcon
             onchange={searchLocation}
@@ -166,12 +173,12 @@ export default function BrowseAll(props) {
               resolution={resolution}
               device={device}
               link={true}
-              linkAll="/browse/all"
+              linkAll="/all"
             />
           </div>
         </div>
       </div>
-      <NavBottom routes={routes} />
+      <NavBottom />
     </div>
   ) : (
     <div>Loading...</div>

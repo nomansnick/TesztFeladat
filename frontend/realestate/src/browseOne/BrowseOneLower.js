@@ -18,7 +18,7 @@ export default function BrowseOneLower(props) {
       : { mt: '-10%', mw: '5rem' }
 
   const rating = {
-    color: 'yellow',
+    color: 'orange',
   }
 
   const thumbnailFix = {
@@ -28,7 +28,7 @@ export default function BrowseOneLower(props) {
   }
 
   return (
-    <div className="d-flex flex-column flex-1 w-100 h-100 bg-primary rounded1Rem mt-n3">
+    <div className="d-flex flex-column flex-1 w-100 h-100 bg-white rounded1Rem mt-n3">
       <Image
         className="doubleBorder z-index-5 border-double"
         src={oneItemData.person.picUrl}
@@ -38,8 +38,8 @@ export default function BrowseOneLower(props) {
       />
       <div className="d-flex flex-column align-items-start w-auto z-index-3 h-100 p-3 ml-3 rounded1Rem pt-3">
         <div className="h-100 w-100 d-flex flex-column justify-content-between">
-          <div className="d-flex flex-column justify-content-between">
-            <div>{oneItemData.person.name}</div>
+          <div className="d-flex flex-column justify-content-around">
+            <h5 className="font-weight-bold">{oneItemData.person.name}</h5>
             <div className="text-muted">{oneItemData.person.workplace}</div>
             <Rating
               style={{ ...rating }}
@@ -49,18 +49,18 @@ export default function BrowseOneLower(props) {
               fullSymbol="fa fa-star"
             />
           </div>
-          <div className="d-flex flex-column justify-content-around h-25">
-            <div className="font-weight-bold">{oneItemData.name}</div>
+          <div className="d-flex flex-column justify-content-around h-25 mt-2 mb-2">
+            <h3 className="font-weight-bold">{oneItemData.name}</h3>
             <div className="text-muted">
               <i className="fa fa-map-marker" aria-hidden="true"></i>
               {oneItemData.addressString}
             </div>
           </div>
           <BrosweMultiIconBox
-            className="d-flex justify-self-center"
+            className="d-flex justify-self-center mt-2 mb-1"
             onePlace={oneItemData}
           />
-          <div className="w-100">
+          <div className="w-100 mb-3 mt-1">
             <BrowseItemBottomLine onePlace={oneItemData} />
           </div>
         </div>

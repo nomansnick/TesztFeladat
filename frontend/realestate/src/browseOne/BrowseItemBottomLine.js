@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button'
 export default function BrowseItemBottomLine(props) {
   const { onePlace } = props
   return (
-    <div className="d-flex justify-content-around">
-      <div>{onePlace.price} HUF</div>
+    <div className="d-flex justify-content-between align-items-center">
+      <div className="font-weight-bold">HUF {onePlace.price}</div>
       <div>
         {onePlace.isNegotiable === true ? (
           <Button className="rounded-pill" variant="success">

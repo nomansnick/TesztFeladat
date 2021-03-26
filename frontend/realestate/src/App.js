@@ -65,7 +65,6 @@ function App() {
     if (param >= typographies.length - 1) {
       setTypography(typographies[0].type)
       setTypoCycle(0)
-      console.log(usedSize)
       classNameBuilder(
         resolutions[device][usedSize].className,
         typographies[0].className
@@ -93,7 +92,6 @@ function App() {
   }
 
   function nextResInner(param, array) {
-    console.log(param)
     if (param >= array.length - 1) {
       setResolution(array[0].size)
       setResCycle(0)
@@ -113,8 +111,14 @@ function App() {
 
   return (
     <Router>
-      <div className="d-flex w-100 h-100 flex-wrap justify-content-around align-items-center bg-dark">
-        <div className="d-flex align-items-center justify-content-center">
+      <div className="bgMain bg-dark w-100 h-100" />
+      <div className="d-flex w-100 h-100 flex-wrap justify-content-around align-items-center">
+        <div className="d-flex flex-column align-items-center justify-content-around">
+          <div className="d-flex flex-column align-items-start">
+            <h1 className="font-weight-bold orange">Housing</h1>
+            <h1 className="font-weight-bold text-white">Real Estate</h1>
+            <h4 className="text-white">iOS UI Kit Template</h4>
+          </div>
           <UiSetter
             device={device}
             setDevice={nextDevice}

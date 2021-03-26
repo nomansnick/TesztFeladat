@@ -11,7 +11,7 @@ export default function BrowseOneItem(props) {
   const screenWidth = resolution.split(' ')[0]
   const imageHeight =
     device === 'SmartPhone'
-      ? '20rem'
+      ? '17rem'
       : device === 'Tablet' && screenWidth > 1000
       ? '40rem'
       : device === 'Tablet' && screenWidth < 1000
@@ -32,7 +32,7 @@ export default function BrowseOneItem(props) {
   return oneItemData ? (
     <div className="d-flex justify-content-center align-items-stretch h-100 w-100">
       <div className="col-align-self-center pl-0 pr-0 rounded1Rem w-100">
-        <div className="d-flex flex-column align-items-center h-100 w-100">
+        <div className="d-flex flex-column align-items-center h-100 w-100  mb-4">
           <div
             className="d-flex w-100 justify-content-between"
             style={roundedTopImage}

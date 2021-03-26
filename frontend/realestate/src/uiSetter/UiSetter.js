@@ -15,6 +15,17 @@ export default function UiSetter(props) {
     resCycle,
   } = props
 
+  const tempObj = {
+    category: 'Real Estate',
+    fileFormat: 'PSD',
+    image: 'NOT INCLUDED',
+    cycler: '0',
+  }
+
+  function tempSetter() {
+    console.log('TODO!!!')
+  }
+
   return (
     <div>
       <Table>
@@ -25,26 +36,30 @@ export default function UiSetter(props) {
               value={device}
               valueSetter={setDevice}
               cycler={deviceCycle}
+              available={true}
             />
             <OneCell
               label="Category"
-              value={device}
-              valueSetter={setDevice}
-              cycler={deviceCycle}
+              value={tempObj.category}
+              valueSetter={tempSetter}
+              cycler={tempObj.cycler}
+              available={true}
             />
           </tr>
           <tr>
             <OneCell
               label="File Format"
-              value={device}
-              valueSetter={setDevice}
-              cycler={deviceCycle}
+              value={tempObj.fileFormat}
+              valueSetter={tempSetter}
+              cycler={tempObj.cycler}
+              available={true}
             />
             <OneCell
               label="Image"
-              value={device}
-              valueSetter={setDevice}
-              cycler={deviceCycle}
+              value={tempObj.image}
+              valueSetter={tempSetter}
+              cycler={tempObj.cycler}
+              available={false}
             />
           </tr>
           <tr>
@@ -53,12 +68,14 @@ export default function UiSetter(props) {
               value={typography}
               valueSetter={setTypography}
               cycler={typoCycle}
+              available={true}
             />
             <OneCell
               label="Screen"
               value={resolution}
               valueSetter={setResolution}
               cycler={resCycle}
+              available={true}
             />
           </tr>
         </tbody>

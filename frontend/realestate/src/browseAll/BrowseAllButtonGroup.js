@@ -9,7 +9,7 @@ export default function BrowseAllButtonGroup(props) {
         click={activate}
         className={
           activeButton === 'BUY'
-            ? 'roundedTop orangeBg text-white buttonCustom'
+            ? 'roundedTop buttonHeight orangeBg text-white buttonCustom'
             : 'roundedTop text-dark buttonCustom'
         }
         param="BUY"
@@ -20,7 +20,7 @@ export default function BrowseAllButtonGroup(props) {
         click={activate}
         className={
           activeButton === 'RENT'
-            ? 'roundedTop orangeBg text-white buttonCustom'
+            ? 'roundedTop buttonHeight orangeBg text-white buttonCustom'
             : 'roundedTop text-dark buttonCustom'
         }
         param="RENT"

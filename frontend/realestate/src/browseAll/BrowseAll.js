@@ -190,7 +190,7 @@ export default function BrowseAll(props) {
           </div>
         </div>
       </div>
-      <NavBottom className="mt-n5" routes={routes} />
+      <NavBottom routes={routes} />
     </div>
   ) : (
     <div>Loading...</div>

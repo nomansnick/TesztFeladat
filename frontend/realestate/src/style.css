@@ -15,11 +15,12 @@
 }
 
 .roundedTop {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .buttonCustom {
+  min-height: 3rem;
   width: 8rem;
   margin-left: 0.1rem;
   margin-right: 0.1rem;
@@ -30,15 +31,15 @@
 }
 
 .slickImgContainer {
-  height: 18vh;
+  height: 10rem;
 }
 
 .slickImgContainerMed {
-  height: 22vh;
+  height: 14rem;
 }
 
 .slickImgContainerLarge {
-  height: 30vh;
+  height: 19rem;
 }
 
 .doubleBorder {

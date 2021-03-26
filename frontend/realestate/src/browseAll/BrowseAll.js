@@ -136,8 +136,8 @@ export default function BrowseAll(props) {
     'd-flex flex-column justify-content-between col-12 rounded1Rem bg-white h-100 pb-5'
 
   const Phone = ' pt-3'
-  const Tablet = ' pt-4 pr-4 pl-4'
-  const Pc = ' pt-5 pr-5 pl-5'
+  const Tablet = ' pt-2 pr-4 pl-4'
+  const Pc = ' pt-3 pr-5 pl-5'
 
   return items ? (
     <div className="h-100">

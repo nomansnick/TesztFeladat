@@ -155,7 +155,7 @@ export default function BrowseAll(props) {
           <SearchWithIcon
             onchange={searchLocation}
             name="search"
-            placeholder="&#xF002;  Where do you want to live?"
+            placeholder="&#xF002;  Number Street, City Postal, Country Code"
             label="location"
             type="text"
           />

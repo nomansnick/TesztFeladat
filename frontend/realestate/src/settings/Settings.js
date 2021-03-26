@@ -3,7 +3,7 @@ const devices = ['SmartPhone', 'Tablet', 'Pc']
 const typographies = [
   { type: 'Times New Roman', className: 'tNR' },
   { type: 'Arial', className: 'arial' },
-  { type: 'Verdana', className: 'verdana' },
+  { type: 'Courier New', className: 'cN' },
 ]
 
 const formats = ['PSD', 'Not Implemented']

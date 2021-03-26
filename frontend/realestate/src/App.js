@@ -13,6 +13,7 @@ import {
   faComment,
   faHeart,
   faBell,
+  faAngleRight,
   faAngleLeft,
 } from '@fortawesome/free-solid-svg-icons'
 import { devices, typographies, resolutions } from './settings/Settings'
@@ -27,6 +28,7 @@ library.add(faSearch)
 library.add(faComment)
 library.add(faHeart)
 library.add(faBell)
+library.add(faAngleRight)
 library.add(faAngleLeft)
 
 function App() {
@@ -111,7 +113,7 @@ function App() {
 
   return (
     <Router>
-      <div className="d-flex w-100 h-100 flex-wrap justify-content-around align-items-center">
+      <div className="d-flex w-100 h-100 flex-wrap justify-content-around align-items-center bg-dark">
         <div className="d-flex align-items-center justify-content-center">
           <UiSetter
             device={device}

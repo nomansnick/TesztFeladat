@@ -10,11 +10,11 @@ export default function BrowseOneLower(props) {
   const screenHeight = resolution.split(' ')[2]
   const thumbnail =
     device === 'Pc' && screenHeight > 800
-      ? { mt: '-3%', mw: '15vh' }
+      ? { mt: '-3%', mw: '9rem' }
       : device === 'Pc' && screenHeight < 800
-      ? { mt: '-4%', mw: '15vh' }
+      ? { mt: '-4%', mw: '8rem' }
       : device === 'Tablet'
-      ? { mt: '-5%', mw: '12vh' }
+      ? { mt: '-5%', mw: '9rem' }
       : { mt: '-10%', mw: '5rem' }
 
   const rating = {

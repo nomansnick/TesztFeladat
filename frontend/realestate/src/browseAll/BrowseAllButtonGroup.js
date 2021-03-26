@@ -9,8 +9,8 @@ export default function BrowseAllButtonGroup(props) {
         click={activate}
         className={
           activeButton === 'BUY'
-            ? 'roundedTop buttonHeight orangeBg text-white buttonCustom'
-            : 'roundedTop text-dark buttonCustom'
+            ? 'roundedTop buttonHeight orangeBg text-white shadow-none btn-outline-light buttonCustom border-0'
+            : 'roundedTop text-dark buttonCustom bg-light shadow-none btn-outline-light border-0'
         }
         param="BUY"
       >
@@ -20,8 +20,8 @@ export default function BrowseAllButtonGroup(props) {
         click={activate}
         className={
           activeButton === 'RENT'
-            ? 'roundedTop buttonHeight orangeBg text-white buttonCustom'
-            : 'roundedTop text-dark buttonCustom'
+            ? 'roundedTop buttonHeight orangeBg text-white buttonCustom shadow-none btn-outline-light border-0'
+            : 'roundedTop text-dark buttonCustom bg-light shadow-none btn-outline-light border-0'
         }
         param="RENT"
       >

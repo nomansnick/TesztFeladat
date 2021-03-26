@@ -11,19 +11,17 @@ const inputStyle = {
 }
 
 export default function SearchWithIcon(props) {
-  const { label, placeholder, type, name } = props
-  const [field, meta] = useField(props)
+  const { label, placeholder, type, name, onchange } = props
 
   return (
     <InputGroup className="mb-3">
       <label htmlFor={name}></label>
       <FormControl
-        {...field}
-        {...props}
+        onChange={(event) => onchange(event.target.value)}
         id={label}
         type={type}
         style={{ ...inputStyle }}
-        className="rounded-pill"
+        className="rounded-pill border-0"
         placeholder={placeholder}
         aria-label={label}
         aria-describedby="basic-addon1"

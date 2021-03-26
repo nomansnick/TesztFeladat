@@ -8,19 +8,16 @@ export default function BrowseOneItem(props) {
   const { resolution, device } = props
   const { oneItemData } = useOneItem()
 
-  console.log(device)
-  console.log(resolution)
-
   const screenWidth = resolution.split(' ')[0]
   const imageHeight =
     device === 'SmartPhone'
       ? '20rem'
       : device === 'Tablet' && screenWidth > 1000
-      ? '30rem'
+      ? '40rem'
       : device === 'Tablet' && screenWidth < 1000
-      ? '25rem'
+      ? '30rem'
       : screenWidth > 1500
-      ? '25rem'
+      ? '30rem'
       : '25rem'
 
   const roundedTopImage = {

@@ -8,7 +8,7 @@ export default function LinkBack() {
     textDecoration: 'none',
   }
   return (
-    <div className="bg-alert">
+    <div>
       <Link style={setting} to="/">
         <i className="fa fa-angle-left fa-2x text-dark" aria-hidden="true"></i>
       </Link>

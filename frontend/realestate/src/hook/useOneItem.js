@@ -15,12 +15,10 @@ export default function useOneItem() {
           let address = addressToString(resp.data)
           setOneItemData({ ...resp.data, addressString: address })
         } catch (error) {
-          console.log(places)
           let answer = ''
           places.length - 1 <= id
             ? (answer = places[0])
             : (answer = places[id - 1])
-          console.log(answer)
           let address = addressToString(answer)
           setOneItemData({ ...answer, addressString: address })
         }

@@ -3,6 +3,7 @@ import Slider from 'react-slick'
 import Image from 'react-bootstrap/Image'
 import '../style.css'
 import { Link } from 'react-router-dom'
+import LinkForth from '../LinkForth'
 
 export default function SliderCustom(props) {
   const {
@@ -14,6 +15,7 @@ export default function SliderCustom(props) {
     resolution,
     clicked,
     link,
+    linkAll,
   } = props
   const settings = {
     dots: false,
@@ -26,17 +28,22 @@ export default function SliderCustom(props) {
 
   return type === 'fixed' || items ? (
     <div className="d-flex flex-column h-100">
-      <h3 className="font-weight-bold pb-3">{title}</h3>
+      <div className="d-flex justify-content-between align-items-center">
+        <h3 className="font-weight-bold">{title}</h3>
+        <div className="w-25">
+          <LinkForth linkTo={linkAll} text="See All" />
+        </div>
+      </div>
       <Slider {...settings}>
         {items.map((oneItem) => (
           <div
             key={oneItem.id}
             className={
               device === 'SmartPhone'
-                ? 'slickImgContainer'
+                ? 'slickImgContainer pr-3'
                 : resolution.split(' ')[2] < 800
-                ? 'slickImgContainerMed'
-                : 'slickImgContainerLarge'
+                ? 'slickImgContainerMed pr-3'
+                : 'slickImgContainerLarge pr-3'
             }
           >
             {!link ? (

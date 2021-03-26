@@ -1,9 +1,13 @@
 .orange {
-  color: orange;
+  color: rgb(230, 140, 100);
+}
+
+.lightGreyBg {
+  background: lightgray;
 }
 
 .orangeBg {
-  background-color: orange;
+  background-color: rgb(230, 140, 100);
 }
 
 .rounded2Rem {
@@ -54,7 +58,7 @@
 }
 
 .navBarHeight {
-  height: 5rem;
+  height: 4rem;
 }
 
 .smartPhoneGS5 {

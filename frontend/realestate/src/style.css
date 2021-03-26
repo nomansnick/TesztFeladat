@@ -1,0 +1,144 @@
+.orange {
+  color: rgb(230, 140, 100);
+}
+
+.orangeBg {
+  background: rgb(230, 140, 100) !important;
+}
+
+.lightGreyBg {
+  background: lightgray;
+}
+
+.titleFont {
+  font-size: 3rem;
+}
+
+.titleFontSm {
+  font-size: 2rem;
+}
+
+.bgMain {
+  position: fixed;
+  top: 0px;
+  z-index: -20;
+}
+
+.orangeBg {
+  background-color: rgb(230, 140, 100);
+}
+
+.iconFontSize {
+  font-size: 0.75rem;
+}
+
+.iconBoxHeight {
+  min-height: 3rem;
+}
+
+.borderNone {
+  border: none !important;
+}
+
+.rounded2Rem {
+  border-radius: 2rem;
+}
+
+.rounded1Rem {
+  border-radius: 1rem;
+}
+
+.roundedTop {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.buttonCustom {
+  min-height: 3rem;
+  width: 8rem;
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
+}
+
+.marginBottomCust {
+  margin-bottom: -4rem;
+}
+
+.slickImgContainer {
+  height: 10rem;
+}
+
+.slickImgContainerMed {
+  height: 14rem;
+}
+
+.slickImgContainerLarge {
+  height: 19rem;
+}
+
+.doubleBorder {
+  border-width: 0.3rem;
+  border-color: white;
+  border-style: double;
+}
+
+.settingButton {
+  width: 10rem;
+  height: 5rem;
+}
+
+.navBarHeight {
+  height: 4rem;
+}
+
+.smartPhoneGS5 {
+  width: 360px;
+  height: 640px;
+}
+
+.smartPhoneI10 {
+  width: 375px;
+  height: 812px;
+}
+
+.smartPhonePixel {
+  width: 411px;
+  height: 731px;
+}
+
+.pcScreen1920x1080 {
+  width: 1920px;
+  height: 1080px;
+}
+
+.pcScreen1600x900 {
+  width: 1600px;
+  height: 900px;
+}
+
+.pcScreen1024x768 {
+  width: 1024px;
+  height: 768px;
+}
+
+.tablet {
+  width: 768px;
+  height: 1024px;
+}
+
+.tabletPro {
+  width: 1024px;
+  height: 1366px;
+}
+
+.tNR {
+  font-family: 'Times New Roman';
+}
+
+.arial {
+  font-family: 'Arial';
+}
+
+.cN {
+  font-family: 'Courier New';
+}

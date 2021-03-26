@@ -3,7 +3,7 @@ import ButtonCustom from '../ButtonCustom'
 
 export default function OneCell(props) {
   const { label, valueSetter, cycler, value, available } = props
-  const classBase = 'btn border border border-secondary dark settingButton'
+  const classBase = 'btn border-secondary rounded1Rem dark settingButton'
   return (
     <td className="borderNone">
       <ButtonCustom

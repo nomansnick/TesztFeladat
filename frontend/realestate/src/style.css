@@ -10,6 +10,14 @@
   background: lightgray;
 }
 
+.titleFont {
+  font-size: 3rem;
+}
+
+.titleFontSm {
+  font-size: 2rem;
+}
+
 .bgMain {
   position: fixed;
   top: 0px;

@@ -114,10 +114,12 @@ function App() {
       <div className="bgMain bg-dark w-100 h-100" />
       <div className="d-flex w-100 h-100 flex-wrap justify-content-around align-items-center">
         <div className="d-flex flex-column align-items-center justify-content-around">
-          <div className="d-flex flex-column align-items-start">
-            <h1 className="font-weight-bold orange">Housing</h1>
-            <h1 className="font-weight-bold text-white">Real Estate</h1>
-            <h4 className="text-white">iOS UI Kit Template</h4>
+          <div className="d-flex flex-column align-items-start w-100 ml-5 mb-5">
+            <h2 className="font-weight-bold orange titleFont">Housing</h2>
+            <h2 className="font-weight-bold text-white titleFont">
+              Real Estate
+            </h2>
+            <h4 className="text-white titleFontSm">iOS UI Kit Template</h4>
           </div>
           <UiSetter
             device={device}

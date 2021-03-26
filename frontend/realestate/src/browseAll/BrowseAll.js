@@ -18,7 +18,7 @@ export default function BrowseAll(props) {
   const [activeButton, setActiveButton] = useState(' ')
   const [categories, setCategories] = useState(CATEGORIES)
   const [isSortedDistance, setIsSortedDistance] = useState(false)
-  const [lastAddress, setLastAddress] = useState(' ')
+  const [lastAddress, setLastAddress] = useState(null)
   const [isSortedCategory, setIsSortedCategory] = useState(false)
   const [activeCategory, setActiveCategory] = useState(' ')
   const { items } = useManyItems()
@@ -45,9 +45,11 @@ export default function BrowseAll(props) {
   }
 
   function activateTypeFilter(target) {
-    setActiveButton(target)
     let changed = []
-    listed ? (changed = [...listed]) : (changed = [...items])
+    listed && activeButton !== 'RENT' && activeButton !== 'BUY'
+      ? (changed = [...listed])
+      : (changed = [...items])
+    setActiveButton(target)
     target === 'BUY'
       ? (changed = changed.filter((onePlace) => onePlace.isForSale))
       : (changed = changed.filter((onePlace) => !onePlace.isForSale))
@@ -60,7 +62,9 @@ export default function BrowseAll(props) {
 
   function filterCategory(category) {
     let changed = []
-    listed ? (changed = [...listed]) : (changed = [...items])
+    listed && !isSortedCategory
+      ? (changed = [...listed])
+      : (changed = [...items])
     changed = changed.filter((onePlace) => onePlace.type === category)
     setListed(changed)
     setActiveCategory(category)
@@ -89,6 +93,14 @@ export default function BrowseAll(props) {
   }
 
   async function coordinates(address) {
+    console.log(address)
+    console.log(items)
+    console.log('address')
+    if (address === null) {
+      console.log('hiba')
+      setListed(items)
+      return
+    }
     const access_key = 'cfbb81329857df19e3ec733b22ab7a86'
     const query = address
     try {
